@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const viewport = document.getElementById('viewport');
+const target = document.getElementsByClassName('header')[0];
 const app = document.createElement('div');
 app.id = 'root';
-if (viewport) viewport.prepend(app);
+if (target) target.prepend(app);
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(<App />, document.getElementById('root'))
+registerServiceWorker()
