@@ -8,8 +8,12 @@ import './App.css'
 const mode = [
   `onion`,
   `normal`,
-  `slide`
+  `swipe`
 ]
+const PlantappContainer = `detail-and-compare`
+// const PlantappOrigin = `detail-screen`
+// const PlantappCompare = `compare-screen`
+
 const StyledApp = styled.div`
   text-align: center;
   width: 100%;
@@ -48,6 +52,7 @@ const ModeButn = styled.div`
 `
 
 const RangeWrapper = styled.div`
+  display: ${props => props.visiable ? `block` : `none`};
   width: 320px !important;
   .input-range__track {
     background: var(--button-color);
@@ -69,24 +74,17 @@ export default class App extends Component {
     value: 1
   }
   handleClick = (id) => {
-    const ref = document.getElementsByClassName('detail-and-compare')[0]
+    const ref = document.getElementsByClassName(PlantappContainer)[0]
     ref.setAttribute('data-mode', mode[id])
     this.setState({ mode:  mode[id]})
-
-    if (mode[id] === `normal`) {
-
-    } else {
-
-    }
   }
 
   handleSlide = (value) => {
     this.setState({ value })
     if (this.state.mode === `onion`) {
-      console.log(value)
       document.body.style.setProperty('--onion-mode-opacity', value)
-    } else {
-
+    } else if (this.state.mode === `swipe`) {
+      document.body.style.setProperty('--swipe-mode-width', `${value*100}%`)
     }
   }
   render() {
@@ -99,7 +97,7 @@ export default class App extends Component {
             )
           }
         </Wrapper>
-        <RangeWrapper>
+        <RangeWrapper visiable={this.state.mode !== 'normal'}>
           <InputRange
             maxValue={1}
             minValue={0}
