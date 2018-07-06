@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Plantapp Diff Tool",
-  "version": "0.1.4",
-  "description": "upgrade your version control service with better diff function",
-  "author": "Lichin-Lin",
+  "name": "Diff.Plantapp",
+  "version": "0.1.5",
+  "description": "A handy diff plugin for your version control service",
+  "author": "Lichin Lin",
   "icons": {
     "16": "/icon16.png",
     "48": "/icon48.png",
