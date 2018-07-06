@@ -7,16 +7,14 @@ Diff.plantapp is a Chrome extension for designers to upgrade their Plantapp, ver
 
 ![Diff.Plantapp Logo](https://diff-plantapp.firebaseapp.com/images/intro1.png)
 
----
-
+<br/><br/><br/>
 ## Issue about original Plantapp diff mode
 Plantapp is chill, but when come to compare mode, designers are not able to tell the differences between two version of the file. every tiny differences cost time to find out!
+<br/><br/>
 ![normal plantapp](https://diff-plantapp.firebaseapp.com/images/normal.png)
 
----
-
+<br/><br/><br/>
 ## Diff.Plantapp save your day!
 We provide two more kinds of diff mode, onion and swipe, making designer easier to compare the subtle differences between two version.
+<br/><br/>
 ![with diff.plantapp](https://diff-plantapp.firebaseapp.com/images/diff.plantapp.png)
-
----
