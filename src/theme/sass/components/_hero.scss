@@ -1,16 +1,53 @@
 .hero{
   position: relative;
   width: 100%;
-  background-image: url("../images/evie_default_bg.jpeg");
+  height: calc(100vw * 8 / 16);
+  // background-image: url("../images/evie_default_bg.jpeg");
   box-shadow: $hero-shadow;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   color: $hero-color;
+  overflow: hidden;
 
   &__inner{
     position: relative;
     z-index: 3;
+    height: 100%;
+  }
+  /* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      // transform: translateX(-25%);
+      width: 100%;
+      height: auto;
+
+      // @media (min-aspect-ratio: 16/9) {
+      //   height: 300%;
+      //   top: -100%;
+      // }
+      //
+      // @media (max-aspect-ratio: 16/9) {
+      //   width: 300%;
+      //   left: -100%;
+      // }
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: auto;
+
+    #myVideo {
+      width: 300%;
+      left: -100%;
+      height: 300%;
+      top: -120%;
+    }
+  }
+
+  .container {
+    height: 100%;
   }
 }
 
@@ -23,7 +60,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: $hero-color-opacity;
+  opacity: 0.75;
   z-index: 1;
   background-color: $primary;
 }
@@ -54,7 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc( 100vh - 50px );
+  min-height: 100%;
   padding: calc( #{$navbar-height + 24pt}) 0; // Padding added to avoid overlapping with fixed navigation bars
   overflow: auto;
 

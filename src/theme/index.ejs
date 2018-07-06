@@ -4,13 +4,27 @@
   <meta class="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Diff.Plantapp</title>
+
+  <meta property="og:title" content="Diff.Plantapp | A handy diff plugin for your version control service">
+  <meta property="og:description" content="Diff.plantapp is a Chrome extension for designers to upgrade their Plantapp, version control service, with better compare function">
+  <meta property="og:image" content="./images/intro1.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diff-plantapp.firebaseapp.com/">
+
+  <meta name="twitter:title" content="Diff.Plantapp | A handy diff plugin for your version control service">
+  <meta name="twitter:description" content="Diff.plantapp is a Chrome extension for designers to upgrade their Plantapp, version control service, with better compare function">
+  <meta name="twitter:image" content="./images/intro1.png">
+
+  <link rel="icon" sizes="192x192" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./favicon.ico">
+  <link rel="mask-icon" href="./favicon.ico">
+
   <!-- Don't forget to add your metadata here -->
   <link rel='stylesheet' href='<%= asset("css/style.min.css") %>' />
 </head>
 <body>
   <!-- Hero(extended) navbar -->
   <div class="navbar navbar--extended">
-    <nav class="nav__mobile"></nav>
     <div class="container">
       <div class="navbar__inner">
         <a href='/' class="navbar__logo"><img src="./images/logo.svg"></a>
@@ -20,6 +34,9 @@
   </div>
   <!-- Hero unit -->
   <div class="hero">
+    <video autoplay muted loop id="myVideo">
+      <source src="./video/demo.mp4" type="video/mp4">
+    </video>
     <div class="hero__overlay hero__overlay--gradient"></div>
     <div class="hero__mask"></div>
     <div class="hero__inner">
@@ -47,7 +64,7 @@
     <div class="container">
       <div class="expanded__inner">
         <div class="expanded__media">
-          <img src="./images/undraw_browser.svg" class="expanded__image">
+          <img src="./images/normal.png" class="expanded__image">
         </div>
         <div class="expanded__content">
           <h2 class="expanded__title">Issue about original Plantapp diff mode</h2>
@@ -60,7 +77,7 @@
     <div class="container">
       <div class="expanded__inner">
         <div class="expanded__media">
-          <img src="./images/undraw_frameworks.svg" class="expanded__image">
+          <img src="./images/diff.plantapp.png" class="expanded__image">
         </div>
         <div class="expanded__content">
           <h2 class="expanded__title">Diff.Plantapp save your day!</h2>
@@ -73,7 +90,9 @@
     <div class="container">
       <div class="expanded__inner">
         <div class="expanded__media">
-          <img src="./images/together.svg" class="expanded__image">
+          <video autoplay muted loop>
+            <source src="./video/demo.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="expanded__content">
           <h2 class="expanded__title">Demo Video</h2>
@@ -104,22 +123,22 @@
 
           <div class="footer__data__item">
             <div class="footer__row">
-              website created by <a href="https://twitter.com/ninalimpi" target="_blank" class="footer__link">Lichin Lin</a>
+              website created by <a href="https://www.facebook.com/lichin0410" target="_blank" class="footer__link">Lichin Lin</a>
             </div>
             <div class="footer__row">
-            plugin code/design by <a href="https://twitter.com/anges244" target="_blank" class="footer__link">Lichin Lin</a>
+            plugin code/design by <a href="https://www.facebook.com/lichin0410" target="_blank" class="footer__link">Lichin Lin</a>
             </div>
           </div>
 
           <div class="footer__data__item">
           <div class="footer__row">
-            <a href="https://github.com/anges244/evie" target="_blank" class="footer__link">GitHub</a>
+            <a href="mailto:vic20087cjimlin@gmail.com" class="footer__link">Contact mail</a>
           </div>
           <div class="footer__row">
-            <a href="https://twitter.com/undraw_co" target="_blank" class="footer__link">Twitter</a>
+            <a href="https://github.com/lichin-lin/Plantapp-diff" target="_blank" class="footer__link">GitHub</a>
           </div>
           <div class="footer__row">
-            <a href="https://www.facebook.com/undraw.co/" target="_blank" class="footer__link">Facebook</a>
+            <a href="https://medium.com/@vic20087cjimlin" target="_blank" class="footer__link">Medium</a>
           </div>
         </div>
       </div>

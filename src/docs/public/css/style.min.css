@@ -858,21 +858,40 @@ select {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("../images/evie_default_bg.jpeg");
+  height: calc(100vw * 8 / 16);
   box-shadow: 0 4px 11px rgba(124, 146, 169, 0.5);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: #ffffff; }
+  color: #ffffff;
+  overflow: hidden;
+  /* Style the video: 100% width and height to cover the entire window */ }
   .hero__inner {
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    height: 100%; }
+  .hero #myVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto; }
+  @media screen and (max-width: 1024px) {
+    .hero {
+      height: auto; }
+      .hero #myVideo {
+        width: 300%;
+        left: -100%;
+        height: 300%;
+        top: -120%; } }
+  .hero .container {
+    height: 100%; }
 
 .hero__overlay {
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.96;
+  opacity: 0.75;
   z-index: 1;
   background-color: #0680FE; }
 
@@ -897,7 +916,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc( 100vh - 50px);
+  min-height: 100%;
   padding: calc( 92px) 0;
   overflow: auto; }
   .hero__content__inner {
@@ -1043,15 +1062,19 @@ select {
   @media (min-width: 992px) {
     .expanded:nth-child(even) .expanded__media {
       order: 1; } }
+  .expanded:nth-child(even) .expanded__media video {
+    position: relative;
+    width: 90%;
+    height: auto; }
 
 /* Actual content */
 .expanded__image {
   width: 90%;
-  max-width: 220px;
+  max-width: 320px;
   padding: 16pt 0; }
   @media (min-width: 992px) {
     .expanded__image {
-      max-width: 280px; } }
+      max-width: 320px; } }
 
 .expanded__title {
   max-width: 550px; }
