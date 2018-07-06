@@ -1,0 +1,24 @@
+<% if (locals.site_analytics){ %>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= locals.site_analytics%>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<%= locals.site_analytics%>');
+
+  var trackOutboundLink = function(url,type, additional) {
+	  gtag('event', additional || 'Click', {
+	    'event_category': type || 'outbound',
+	    'event_label': url,
+	    'transport_type': 'beacon'
+	  });
+	};
+</script>
+<% } else { %>
+<script type="text/javascript">
+	var trackOutboundLink = function(url,type,additional) {
+		console.log('Click click...');
+	};
+</script>
+<% } %>

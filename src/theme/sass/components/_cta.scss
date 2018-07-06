@@ -1,0 +1,42 @@
+.cta{
+  background: linear-gradient(to right, $primary, $secondary);
+  color: #fff;
+  padding: 48pt 0;
+  text-align: center;
+
+  .cta__inner {
+    a {
+      margin: 5px 10px;
+    }
+  }
+}
+
+.cta--reverse{
+  background: linear-gradient(to left, $primary, $secondary);
+}
+
+.cta--plain{
+  background: $primary;
+}
+
+.cta--secondary{
+  background: $secondary;
+}
+
+.cta__title{
+  color: inherit;
+  font-size: 2rem;
+}
+
+.cta__sub{
+  opacity: 0.85;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  max-width: 58ch;
+  margin: 16pt auto 24pt auto;
+
+
+  &--center{
+    text-align: center;
+  }
+}
