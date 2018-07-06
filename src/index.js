@@ -6,10 +6,10 @@ import { injectGlobal } from 'styled-components';
 import registerServiceWorker from './registerServiceWorker';
 
 const target = document.getElementsByClassName('artboard-preview')[0];
-const ref = document.getElementsByClassName('compare-screen')[0];
+const ref = document.getElementsByClassName('detail-and-compare')[0];
 const app = document.createElement('div');
 app.id = 'plantapp-diff-plugin';
-// check if target exist & ref is not
+// check if target exist & ref is not hidden
 if (target && ref) target.insertBefore(app, ref)
 
 ReactDOM.render(<App />, document.getElementById('plantapp-diff-plugin'))
